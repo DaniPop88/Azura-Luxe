@@ -162,7 +162,7 @@
             .section-title {
                 font-size: 1.4rem;
             }
-            .about-us, .contact, .faq, .testimonials {
+            .about-us, .contact, .faq, .testimonials, .why-choose, .brand-story, .services, .team-section, .blog-section {
                 padding: 1.2rem;
             }
             nav.desktop {
@@ -371,25 +371,49 @@
             background: var(--primary);
             color: var(--button-text);
         }
-        .about-us, .contact, .faq, .testimonials {
+        .about-us, .contact, .faq, .testimonials, .why-choose, .brand-story, .services, .team-section, .blog-section, .our-partners, .sustainability {
             margin: 3.2rem 0 0 0;
             background: #fff;
             border-radius: var(--card-radius);
             box-shadow: var(--card-shadow);
             padding: 2.2rem 2.2rem 1.7rem 2.2rem;
         }
-        .about-list, .values-list, .faq-list, .testimonial-list {
+        .about-list, .values-list, .faq-list, .testimonial-list, .choose-list, .service-list, .team-list, .blog-list, .partner-list, .sustain-list {
             margin: 0;
             padding: 0 0 0 1.1rem;
         }
-        .about-list li, .values-list li, .faq-list li, .testimonial-list li {
+        .about-list li, .values-list li, .faq-list li, .testimonial-list li, .choose-list li, .service-list li, .team-list li, .blog-list li, .partner-list li, .sustain-list li {
             margin-bottom: 0.92rem;
             font-size: 1.04rem;
             line-height: 1.6;
             font-family: 'Lora', serif;
         }
-        .about-list li strong, .values-list li strong, .faq-list li strong, .testimonial-list li strong {
+        .about-list li strong, .values-list li strong, .faq-list li strong, .testimonial-list li strong, .choose-list li strong, .service-list li strong, .team-list li strong, .partner-list li strong, .sustain-list li strong {
             color: var(--primary);
+        }
+        .brand-story-content {
+            font-size: 1.07rem;
+            margin-bottom: 1.3rem;
+            color: #555;
+            line-height: 1.7;
+        }
+        .blog-title {
+            font-size: 1.15rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .blog-date {
+            font-size: 0.96rem;
+            color: #888;
+            margin-bottom: 0.7rem;
+            font-style: italic;
+        }
+        .blog-content {
+            font-size: 1.04rem;
+            color: #444;
+            margin-bottom: 1.1rem;
         }
         .footer {
             background: var(--footer-bg);
@@ -418,21 +442,9 @@
             font-size: 1.05rem;
             position: relative;
         }
-        .footer-links a:after {
-            content:"";
-            display:block;
-            width:0;
-            height:2px;
-            background:var(--accent);
-            transition:width .3s;
-            margin-top:2px;
-        }
         .footer-links a:hover {
             text-decoration: underline;
             color: var(--accent);
-        }
-        .footer-links a:hover:after {
-            width:100%;
         }
         .footer-info {
             font-size: 0.97rem;
@@ -773,6 +785,13 @@
             <nav class="desktop">
                 <a href="#products">Products</a>
                 <a href="#about">About Us</a>
+                <a href="#brand-story">Brand Story</a>
+                <a href="#why-choose">Why Choose Us</a>
+                <a href="#services">Services</a>
+                <a href="#team-section">Our Team</a>
+                <a href="#blog-section">Blog</a>
+                <a href="#partners">Partners</a>
+                <a href="#sustainability">Sustainability</a>
                 <a href="#contact">Contact</a>
                 <a href="#faq">FAQ</a>
                 <a href="#testimonials">Testimonials</a>
@@ -785,6 +804,13 @@
             <nav class="mobile" id="mobile-nav">
                 <a href="#products">Products</a>
                 <a href="#about">About Us</a>
+                <a href="#brand-story">Brand Story</a>
+                <a href="#why-choose">Why Choose Us</a>
+                <a href="#services">Services</a>
+                <a href="#team-section">Our Team</a>
+                <a href="#blog-section">Blog</a>
+                <a href="#partners">Partners</a>
+                <a href="#sustainability">Sustainability</a>
                 <a href="#contact">Contact</a>
                 <a href="#faq">FAQ</a>
                 <a href="#testimonials">Testimonials</a>
@@ -804,44 +830,55 @@
         <section id="products" class="section">
             <div class="section-title">Shop Our Featured Products</div>
             <div class="products">
-                <!-- Product 1 -->
                 <div class="product-card">
                     <img src="image/placeholder-clothing.png" alt="Luxury dress placeholder">
                     <div class="product-title">Elegant Silk Dress</div>
-                    <div class="product-desc">Stylish and comfortable, perfect for formal occasions.</div>
+                    <div class="product-desc">Stylish and comfortable, perfect for formal occasions. Premium silk sourced internationally. Available in three colors.</div>
                     <div class="product-info">Qty: 10</div>
                     <div class="product-price">₱4,299.00</div>
                     <button class="add-cart-btn" data-name="Elegant Silk Dress" data-price="4299.00" data-stock="10">Add to Cart</button>
                 </div>
-                <!-- Product 2 -->
                 <div class="product-card">
                     <img src="image/placeholder-bag.png" alt="Designer handbag placeholder">
                     <div class="product-title">Designer Leather Handbag</div>
-                    <div class="product-desc">Premium leather, spacious and versatile. Statement luxury piece.</div>
+                    <div class="product-desc">Premium leather, spacious and versatile. Statement luxury piece with custom lining. Limited edition.</div>
                     <div class="product-info">Qty: 5</div>
                     <div class="product-price">₱12,499.00</div>
                     <button class="add-cart-btn" data-name="Designer Leather Handbag" data-price="12499.00" data-stock="5">Add to Cart</button>
                 </div>
-                <!-- Product 3 -->
                 <div class="product-card">
                     <img src="image/placeholder-shoes.png" alt="Luxury shoes placeholder">
                     <div class="product-title">Luxury Heeled Sandals</div>
-                    <div class="product-desc">Handcrafted comfort with a touch of glam.</div>
+                    <div class="product-desc">Handcrafted comfort with a touch of glam. Non-slip sole, available in gold and nude. Perfect for special events.</div>
                     <div class="product-info">Qty: 8</div>
                     <div class="product-price">₱3,750.00</div>
                     <button class="add-cart-btn" data-name="Luxury Heeled Sandals" data-price="3750.00" data-stock="8">Add to Cart</button>
                 </div>
-                <!-- Product 4 -->
                 <div class="product-card">
                     <img src="image/placeholder-accessory.png" alt="Luxury accessory placeholder">
                     <div class="product-title">Classic Pearl Necklace</div>
-                    <div class="product-desc">Timeless elegance for any outfit.</div>
+                    <div class="product-desc">Timeless elegance for any outfit. Genuine freshwater pearls, hand-knotted. Comes in a luxury box.</div>
                     <div class="product-info">Qty: 12</div>
                     <div class="product-price">₱2,499.00</div>
                     <button class="add-cart-btn" data-name="Classic Pearl Necklace" data-price="2499.00" data-stock="12">Add to Cart</button>
                 </div>
+                <div class="product-card">
+                    <img src="image/placeholder-watch.png" alt="Luxury watch placeholder">
+                    <div class="product-title">Signature Gold Watch</div>
+                    <div class="product-desc">Limited series gold-plated watch with Swiss movement. Water resistant, 2-year warranty.</div>
+                    <div class="product-info">Qty: 6</div>
+                    <div class="product-price">₱8,999.00</div>
+                    <button class="add-cart-btn" data-name="Signature Gold Watch" data-price="8999.00" data-stock="6">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/placeholder-scarf.png" alt="Luxury scarf placeholder">
+                    <div class="product-title">Azura Silk Scarf</div>
+                    <div class="product-desc">Soft silk scarf with original Filipino-inspired pattern. Versatile for all seasons.</div>
+                    <div class="product-info">Qty: 15</div>
+                    <div class="product-price">₱1,599.00</div>
+                    <button class="add-cart-btn" data-name="Azura Silk Scarf" data-price="1599.00" data-stock="15">Add to Cart</button>
+                </div>
             </div>
-            <!-- Cart Section -->
             <div class="cart-section">
                 <div class="cart-title">Your Cart</div>
                 <div class="cart-items"></div>
@@ -850,22 +887,125 @@
             </div>
         </section>
 
-        <!-- About Us Section -->
         <section id="about" class="about-us">
             <div class="section-title">About Us</div>
             <ul class="about-list">
-                <li><strong>Our Story:</strong> Founded in Muntinlupa City, Azura Luxe Atelier was born out of a passion for refined fashion and a commitment to offering Filipino shoppers access to world-class luxury retail.</li>
-                <li><strong>Our Mission:</strong> To provide premium fashion pieces that inspire confidence, celebrate individuality, and elevate everyday style.</li>
+                <li><strong>Our Story:</strong> Founded in Muntinlupa City, Azura Luxe Atelier was born out of a passion for refined fashion and a commitment to offering Filipino shoppers access to world-class luxury retail. Our journey is rooted in the drive to celebrate Filipino artistry while bringing global luxury brands closer to home.</li>
+                <li><strong>Our Mission:</strong> To provide premium fashion pieces that inspire confidence, celebrate individuality, and elevate everyday style. We strive to create a community where every customer feels valued and empowered through their unique sense of fashion.</li>
+                <li><strong>Our Vision:</strong> To be the leading luxury fashion destination in the Philippines, known for our dedication to quality, authenticity, and excellent customer service.</li>
+                <li><strong>Social Responsibility:</strong> Azura Luxe Atelier supports local designers, artisans, and charitable projects through various social initiatives and collaborations.</li>
             </ul>
             <div class="section-title" style="font-size:1.18rem; margin-bottom:0.7rem;">Our Values</div>
             <ul class="values-list">
-                <li><strong>Authenticity</strong> – Only trusted and genuine luxury items.</li>
-                <li><strong>Elegance</strong> – A curated collection that reflects timeless taste.</li>
-                <li><strong>Customer First</strong> – Every client is treated with the highest care and respect.</li>
+                <li><strong>Authenticity</strong> – Only trusted and genuine luxury items. Every product is sourced directly from authorized distributors and checked for quality.</li>
+                <li><strong>Elegance</strong> – A curated collection that reflects timeless taste, blending classic style with modern trends.</li>
+                <li><strong>Customer First</strong> – Every client is treated with the highest care and respect. We offer personalized styling advice and after-sales support.</li>
+                <li><strong>Integrity</strong> – Transparent business practices and ethical sourcing are at the heart of our operations.</li>
+                <li><strong>Innovation</strong> – We constantly seek new ideas, collaborations, and ways to enhance the customer experience.</li>
             </ul>
         </section>
 
-        <!-- Contact Section -->
+        <section id="brand-story" class="brand-story">
+            <div class="section-title">Our Brand Story</div>
+            <div class="brand-story-content">
+                Azura Luxe Atelier began as a vision to unite Filipino heritage with international luxury. Our founders, inspired by the vibrant culture and artistry of the Philippines, set out to create a place where timeless elegance meets contemporary design. From our very first collection, we have focused on showcasing both homegrown talent and world-renowned brands, giving our customers a truly unique shopping experience.
+            </div>
+            <div class="brand-story-content">
+                Over the years, Azura Luxe Atelier has grown into a trusted name in luxury retail. We host exclusive launch events, collaborate with leading designers, and offer limited-edition pieces that you won’t find elsewhere. Our commitment to excellence is reflected in every aspect of our boutique, from the careful selection of products to the attentive service provided by our team.
+            </div>
+            <div class="brand-story-content">
+                We believe that fashion is a powerful form of self-expression, and we are passionate about helping every customer discover their own style. Join us as we continue to celebrate creativity, diversity, and the joy of dressing well.
+            </div>
+        </section>
+
+        <section id="why-choose" class="why-choose">
+            <div class="section-title">Why Choose Azura Luxe Atelier?</div>
+            <ul class="choose-list">
+                <li><strong>Exclusive Collections:</strong> Discover unique pieces from both international designers and Filipino artisans, only available at Azura Luxe Atelier.</li>
+                <li><strong>Personalized Shopping:</strong> Our knowledgeable staff provides individualized advice, fitting assistance, and style recommendations tailored to your preferences.</li>
+                <li><strong>Secure and Convenient Shopping:</strong> Shop with peace of mind. Our website uses advanced security features to protect your personal and payment information.</li>
+                <li><strong>Fast Delivery:</strong> Receive your orders promptly with our reliable delivery service, covering Metro Manila and select provinces.</li>
+                <li><strong>Flexible Returns:</strong> If a purchase isn’t quite right, you can return it within 7 days for a refund or exchange, following our simple and fair policy.</li>
+                <li><strong>Community Impact:</strong> By choosing Azura Luxe Atelier, you support local designers, artisans, and charitable causes that uplift Filipino communities.</li>
+                <li><strong>Events & Workshops:</strong> Attend fashion shows, styling workshops, and exclusive previews to connect with other style enthusiasts.</li>
+                <li><strong>Eco-Friendly Initiatives:</strong> We use sustainable packaging and actively reduce our environmental footprint.</li>
+            </ul>
+        </section>
+
+        <section id="services" class="services">
+            <div class="section-title">Our Services</div>
+            <ul class="service-list">
+                <li><strong>Luxury Clothing:</strong> Elegant dresses, tailored suits, evening wear, and everyday essentials crafted from the finest materials.</li>
+                <li><strong>Designer Handbags:</strong> Iconic bags, totes, and clutches in exclusive designs and premium leathers.</li>
+                <li><strong>Footwear:</strong> Heels, loafers, sneakers, sandals, and slippers combining comfort with sophistication.</li>
+                <li><strong>Accessories:</strong> Jewelry, watches, scarves, belts, and hats to complete every look.</li>
+                <li><strong>Gift Services:</strong> Custom gift wrapping, message cards, and curated gift sets for special occasions.</li>
+                <li><strong>Styling Consultations:</strong> Book a session with our expert stylists for advice on outfits, seasonal trends, and personal wardrobe planning.</li>
+                <li><strong>Private Shopping:</strong> Enjoy an exclusive, personalized shopping experience in our boutique or via virtual appointments.</li>
+                <li><strong>In-Store Events:</strong> Participate in product launches, trunk shows, and member-only gatherings.</li>
+            </ul>
+        </section>
+
+        <section id="team-section" class="team-section">
+            <div class="section-title">Meet the Azura Luxe Team</div>
+            <ul class="team-list">
+                <li><strong>Maria Sanchez</strong> – Founder & Creative Director. Maria’s vision for merging Filipino artistry and global luxury shapes every collection.</li>
+                <li><strong>Jasper Reyes</strong> – Head of Operations. Jasper ensures all logistics and customer interactions are handled with precision and care.</li>
+                <li><strong>Ella Dela Cruz</strong> – Senior Stylist. Ella brings years of experience in fashion consulting and is dedicated to helping clients find their signature style.</li>
+                <li><strong>Team of Local Artisans</strong> – Our skilled makers produce accessories and garments that reflect the rich traditions of Filipino craftsmanship.</li>
+                <li><strong>Marketing & Events Team</strong> – Specialists who organize brand events, partnerships, and digital campaigns to keep our community inspired.</li>
+            </ul>
+        </section>
+
+        <section id="blog-section" class="blog-section">
+            <div class="section-title">Azura Luxe Atelier Blog</div>
+            <ul class="blog-list">
+                <li>
+                    <div class="blog-title">5 Must-Have Accessories To Elevate Your Look</div>
+                    <div class="blog-date">August 2025</div>
+                    <div class="blog-content">Discover the latest trends in jewelry, scarves, and handbags that add sophistication to any outfit. Our stylists share tips for mixing statement pieces with everyday essentials and how to create a capsule wardrobe with maximum impact.</div>
+                </li>
+                <li>
+                    <div class="blog-title">Fashion For Every Occasion: From Boardroom to Ballroom</div>
+                    <div class="blog-date">July 2025</div>
+                    <div class="blog-content">Explore our guide to dressing for success in the workplace, attending formal events, and enjoying casual weekends. Get practical advice on choosing the right fabrics, mastering the art of layering, and accessorizing for every scenario.</div>
+                </li>
+                <li>
+                    <div class="blog-title">Supporting Filipino Designers: Our Commitment</div>
+                    <div class="blog-date">June 2025</div>
+                    <div class="blog-content">Azura Luxe Atelier celebrates Filipino creativity by partnering with local designers and artisans. Learn about our latest collaborations, exclusive collections, and how your purchases help empower the community.</div>
+                </li>
+                <li>
+                    <div class="blog-title">How to Care for Your Luxury Goods</div>
+                    <div class="blog-date">May 2025</div>
+                    <div class="blog-content">Preserve the beauty of your luxury items with our expert care tips. Discover how to store, clean, and maintain clothing, leather goods, and accessories to ensure they last for years to come.</div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="partners" class="our-partners">
+            <div class="section-title">Our Trusted Partners</div>
+            <ul class="partner-list">
+                <li><strong>Filipino Designer Collective</strong> – A group of visionary creatives shaping local and international fashion trends.</li>
+                <li><strong>Global Luxury Brands</strong> – Official collaborations with top brands for exclusive releases and limited editions.</li>
+                <li><strong>Artisan Guild of the Philippines</strong> – Skilled craftspeople supplying unique, handmade accessories and garments.</li>
+                <li><strong>Charity Foundations</strong> – Joint projects to support education, disaster relief, and community development.</li>
+            </ul>
+        </section>
+
+        <section id="sustainability" class="sustainability">
+            <div class="section-title">Sustainability & Social Responsibility</div>
+            <ul class="sustain-list">
+                <li><strong>Eco-Friendly Packaging:</strong> We use recyclable and biodegradable materials for all shipping and gift packaging.</li>
+                <li><strong>Responsible Sourcing:</strong> Our supply chain is carefully vetted to ensure ethical labor practices and environmentally conscious production.</li>
+                <li><strong>Local Empowerment:</strong> By working with Filipino artisans, we help sustain traditional crafts and provide fair economic opportunities.</li>
+                <li><strong>Ongoing Initiatives:</strong> Azura Luxe Atelier is committed to reducing its carbon footprint by adopting green energy solutions and supporting reforestation projects.</li>
+            </ul>
+            <div style="margin-top:1.2rem;font-size:1.03rem;color:#555;">
+                We believe in luxury that cares—for people, for the planet, and for future generations.
+            </div>
+        </section>
+
         <section id="contact" class="contact">
             <div class="section-title">Contact Us</div>
             <ul class="about-list">
@@ -875,35 +1015,45 @@
                 <li><strong>Website:</strong> <a href="https://www.azuraluxe.site" target="_blank">www.azuraluxe.site</a></li>
                 <li><strong>Business Hours:</strong> Mon–Sat: 10:00 AM – 7:00 PM | Sunday: Closed</li>
             </ul>
+            <div style="margin-top:1.2rem; font-size:1.04rem;">
+                For inquiries, feedback, or collaboration proposals, reach out to our team. We’re always happy to assist and connect!
+            </div>
         </section>
 
-        <!-- FAQ Section -->
         <section id="faq" class="faq">
             <div class="section-title">FAQ</div>
             <ul class="faq-list">
                 <li><strong>Do you sell authentic items?</strong><br>
-                    Yes. All products at Azura Luxe Atelier are guaranteed authentic, sourced only from trusted suppliers.
-                </li>
+                    Yes. All products at Azura Luxe Atelier are guaranteed authentic, sourced only from trusted suppliers and officially authorized distributors. Each item comes with a certificate of authenticity.</li>
                 <li><strong>Do you offer delivery?</strong><br>
-                    Yes. We provide delivery within Metro Manila and selected provinces. Standard delivery time is 2–5 business days.
-                </li>
+                    Yes. We provide delivery within Metro Manila and selected provinces. Standard delivery time is 2–5 business days, with express options available for urgent orders. International shipping is available upon request.</li>
                 <li><strong>Do you accept returns?</strong><br>
-                    Returns are accepted within 7 days for items in original condition with receipt. Terms apply.
-                </li>
+                    Returns are accepted within 7 days for items in original condition with receipt. Terms apply. Contact our customer care team for efficient processing and guidance.</li>
+                <li><strong>Can I request a custom design or alteration?</strong><br>
+                    Yes! We offer custom orders and alterations for select items. Our stylists are here to help you personalize your wardrobe.</li>
+                <li><strong>Is gift wrapping available?</strong><br>
+                    Absolutely. We provide premium gift wrapping, custom boxes, and personalized cards upon request for any order.</li>
+                <li><strong>How do I care for my luxury purchases?</strong><br>
+                    Please refer to our blog section for detailed care instructions, or ask our staff for specific tips when you visit our boutique.</li>
+                <li><strong>What payment methods are accepted?</strong><br>
+                    We accept GCash, bank transfer, credit card, and cash on delivery within Metro Manila. Secure payment links are provided for online purchases.</li>
+                <li><strong>Is my data protected?</strong><br>
+                    Yes. We follow strict privacy and data protection protocols. Please read our <a href="privacy-policy.html">Privacy Policy</a> for more information.</li>
             </ul>
         </section>
 
-        <!-- Testimonials Section -->
         <section id="testimonials" class="testimonials">
             <div class="section-title">Testimonials</div>
             <ul class="testimonial-list">
                 <li>💬 “Azura Luxe Atelier is my go-to for timeless fashion. Their bags are authentic and worth every peso.”<br>– Camille, Quezon City</li>
                 <li>💬 “I finally found a local shop that delivers luxury quality with excellent service.”<br>– Martin, Makati</li>
+                <li>💬 “Professional, responsive, and their stylists really care. I found the perfect dress for my wedding!”<br>– Grace, Taguig</li>
+                <li>💬 “Shopping here is always a pleasure. The collections are unique, and the quality is outstanding. Highly recommended!”<br>– Leo, Manila</li>
+                <li>💬 “I appreciate the eco-friendly packaging and the company’s commitment to supporting local communities.”<br>– Joanna, Alabang</li>
             </ul>
         </section>
     </main>
 
-    <!-- Floating Cart Button (FAB) -->
     <div class="cart-fab" title="Lihat keranjang">
         <svg class="cart-fab-icon" viewBox="0 0 32 32" fill="none">
             <circle cx="16" cy="16" r="16" fill="#184a76" opacity="0.08"/>
@@ -911,7 +1061,6 @@
         </svg>
         <div class="cart-fab-badge" style="display:none;">0</div>
     </div>
-    <!-- Cart Modal Popup -->
     <div class="cart-modal-overlay">
         <div class="cart-modal">
             <button class="cart-modal-close-btn" aria-label="Close cart">&times;</button>
@@ -922,7 +1071,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div>
